@@ -1,0 +1,12 @@
+body {
+	background-color: #DCDCDC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h2, label {
+	padding-top: 25px;
+}
+
+hr {
+	padding: 10px
+}
