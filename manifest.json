@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Character Creation",
+        "icon": "fas fa-user-plus",
+        "file": "markdown/Character Creation.md"
+    },
+    {
+        "title": "Species",
+        "icon": "fas fa-users",
+        "file": "markdown/Species.md"
+    }
+]
