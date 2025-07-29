@@ -15,6 +15,6 @@
 # Credits
 - Font Awesome used for icons
 - svgrepo.com used for favicon .svg
-- Background image is a stock photo not owned by me
+- Background image from [teahub.com](https://www.teahub.io/viewwp/mmmwhR_steel-plate-background-hd/)
 - Linked sources and core rules are owned by their respective domain owners
 - Made with love from Arkansas
