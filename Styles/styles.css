@@ -2,10 +2,12 @@
     --sw-yellow: #FFE81F;
     --sw-blue: #0066CC;
     --sw-blue-hover: #0088ff;
-    --sw-blue-gradient: linear-gradient(90deg, var(--swblue) 0%, var(var(--sw-blue-hover)));
+    --sw-blue-gradient: linear-gradient(90deg, var(--sw-blue) 0%, var(--sw-blue-hover));
     --sw-red: #F11F11;
     --sw-red-hover: #FF3333;
+    --sw-red-gradient: linear-gradient(90deg, var(--sw-red) 0%, var(--sw-red-hover));
     --sw-dark: #1a1a1a;
+    --dark-bg: rgba(26, 26, 26, 0.95)
 }
 
 body {
@@ -39,7 +41,7 @@ body {
 }
 
 .card {
-    background: rgba(42, 42, 42, 0.9);
+    background: var(--dark-bg);
     border: 1px solid #444;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -90,7 +92,7 @@ body {
 }
 
 .accordion-button {
-    background: rgba(42, 42, 42, 0.9);
+    background: var(--dark-bg);
     color: white;
     border: 1px solid #444;
 }
@@ -101,12 +103,12 @@ body {
 }
 
 .accordion-body {
-    background: rgba(26, 26, 26, 0.95);
+    background: var(--dark-bg);
     color: white;
 }
 
 .dice-roller-section {
-    background: rgba(42, 42, 42, 0.9);
+    background: var(--dark-bg);
     border-radius: 10px;
     padding: 2rem;
     margin: 2rem 0;
