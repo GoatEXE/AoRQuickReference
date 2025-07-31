@@ -83,3 +83,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         rulesReferenceSection.appendChild(cardCol);
     }
 });
+
+// Smooth scrolling function
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+    });
+}

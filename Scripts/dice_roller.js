@@ -1,11 +1,8 @@
-// Smooth scrolling function
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({
-        behavior: 'smooth'
-    });
-}
-
-// Dice roller functionality
+/**
+ * Adjusts the value of a dice input field.
+ * @param {*} diceType - The type of dice (e.g., proficiency, ability). Correlates to the ID of the input element.
+ * @param {*} change - The amount to change the dice value by (can be positive or negative).
+ */
 function adjustDice(diceType, change) {
     const input = document.getElementById(diceType);
     const currentValue = parseInt(input.value);
@@ -13,6 +10,9 @@ function adjustDice(diceType, change) {
     input.value = newValue;
 }
 
+/**
+ * Clears all dice input fields and hides the results section.
+ */
 function clearDice() {
     const diceTypes = ['proficiency', 'ability', 'boost', 'challenge', 'difficulty', 'setback'];
     diceTypes.forEach(type => {
@@ -21,7 +21,9 @@ function clearDice() {
     document.getElementById('results').style.display = 'none';
 }
 
-// Placeholder dice rolling function - you can integrate your existing dice roller here
+/**
+ * Rolls the dice (simulateRoll function) based on the values in the input fields and displays the results (displayResults function).
+ */
 function rollDice() {
     const proficiency = parseInt(document.getElementById('proficiency').value);
     const ability = parseInt(document.getElementById('ability').value);
@@ -30,12 +32,20 @@ function rollDice() {
     const difficulty = parseInt(document.getElementById('difficulty').value);
     const setback = parseInt(document.getElementById('setback').value);
 
-    // This is a placeholder - replace with your actual dice rolling logic
     const results = simulateRoll(proficiency, ability, boost, challenge, difficulty, setback);
     displayResults(results);
 }
 
-// Placeholder simulation function - replace with your actual dice mechanics
+/**
+ * Simulates a dice roll based on the number of dice all input fields.
+ * @param {Number} prof - The number of proficiency dice.
+ * @param {Number} abil - The number of ability dice.
+ * @param {Number} boost - The number of boost dice.
+ * @param {Number} chal - The number of challenge dice.
+ * @param {Number} diff - The number of difficulty dice.
+ * @param {Number} setb - The number of setback dice.
+ * @returns {Array} - An object containing the results all dice rolls, which is then passed to displayResults from rollDice.
+ */
 function simulateRoll(prof, abil, boost, chal, diff, setb) {
     // This is a simplified simulation - replace with your actual dice rolling logic
     const totalPositive = prof * 2 + abil + boost;
@@ -56,6 +66,10 @@ function simulateRoll(prof, abil, boost, chal, diff, setb) {
     };
 }
 
+/**
+ * Displays the results of the dice roll and adds an interpretation of the results to the results section.
+ * @param {Array} results - The results of all dice rolls from simulateRoll.
+ */
 function displayResults(results) {
     const resultsDiv = document.getElementById('results');
     const summaryDiv = document.getElementById('resultsSummary');
@@ -99,5 +113,5 @@ function displayResults(results) {
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', function () {
-    // Add any initialization code here
+    console.log("Dice roller is ready for use.")
 });
