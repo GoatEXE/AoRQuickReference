@@ -198,7 +198,7 @@ function displayResults(results) {
         summary += `<span class="badge bg-info me-2">Advantage: ${results.advantage}</span>`;
     }
     if (results.threat > 0) {
-        summary += `<span class="badge bg-warning me-2">Threat: ${results.threat}</span>`;
+        summary += `<span class="badge bg-orange me-2">Threat: ${results.threat}</span>`;
     }
     if (results.triumph > 0) {
         summary += `<span class="badge bg-warning me-2">Triumph: ${results.triumph}</span>`;
