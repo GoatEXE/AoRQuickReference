@@ -1,3 +1,82 @@
+let totals = {
+    success: 0,
+    advantage: 0,
+    triumph: 0,
+    despair: 0,
+    failure: 0,
+    threat: 0
+}
+
+const boostDictionary = {
+    roll1: function() {return;},
+    roll2: function() {return;},
+    roll3: function() {totals.success++; return;},
+    roll4: function() {totals.success++; totals.advantage++; return;},
+    roll5: function() {totals.advantage+=2; return;},
+    roll6: function() {totals.advantage++; return;},
+}
+
+const setbackDictionary = {
+    roll1: function() {return;},
+    roll2: function() {return;},
+    roll3: function() {totals.failure++; return;},
+    roll4: function() {totals.failure++; return;},
+    roll5: function() {totals.threat++; return;},
+    roll6: function() {totals.threat++; return;},
+}
+
+const abilityDictionary = {
+    roll1: function() {return;},
+    roll2: function() {totals.success++; return;},
+    roll3: function() {totals.success++; return;},
+    roll4: function() {totals.success+=2; return;},
+    roll5: function() {totals.advantage++; return;},
+    roll6: function() {totals.advantage++; return;},
+    roll7: function() {totals.advantage++; totals.success++; return;},
+    roll8: function() {totals.advantage+=2; return;},
+}
+
+const difficultyDictionary = {
+    roll1: function() {return;},
+    roll2: function() {totals.failure++; return;},
+    roll3: function() {totals.failure+=2; return;},
+    roll4: function() {totals.threat++; return;},
+    roll5: function() {totals.threat++; return;},
+    roll6: function() {totals.threat++; return;},
+    roll7: function() {totals.threat+=2; return;},
+    roll8: function() {totals.threat++; totals.failure++; return;},
+}
+
+const proficiencyDictionary = {
+    roll1: function() {return;},
+    roll2: function() {totals.success++; return;},
+    roll3: function() {totals.success++; return;},
+    roll4: function() {totals.success+=2; return;},
+    roll5: function() {totals.success+=2; return;},
+    roll6: function() {totals.advantage++; return;},
+    roll7: function() {totals.advantage++; totals.success++; return;},
+    roll8: function() {totals.advantage++; totals.success++; return;},
+    roll9: function() {totals.advantage++; totals.success++; return;},
+    roll10: function() {totals.advantage+=2; return;},
+    roll11: function() {totals.advantage+=2; return;},
+    roll12: function() {totals.triumph++; return;},
+}
+
+const challengeDictionary = {
+    roll1: function() {return;},
+    roll2: function() {totals.failure++; return;},
+    roll3: function() {totals.failure++; return;},
+    roll4: function() {totals.failure+=2; return;},
+    roll5: function() {totals.failure+=2; return;},
+    roll6: function() {totals.threat++; return;},
+    roll7: function() {totals.threat++; return;},
+    roll8: function() {totals.threat++; totals.failure++; return;},
+    roll9: function() {totals.threat++; totals.failure++; return;},
+    roll10: function() {totals.threat+=2; return;},
+    roll11: function() {totals.threat+=2; return;},
+    roll12: function() {totals.despair++; return;},
+}
+
 /**
  * Adjusts the value of a dice input field.
  * @param {*} diceType - The type of dice (e.g., proficiency, ability). Correlates to the ID of the input element.
@@ -33,7 +112,9 @@ function rollDice() {
     const setback = parseInt(document.getElementById('setback').value);
 
     const results = simulateRoll(proficiency, ability, boost, challenge, difficulty, setback);
+    console.table(results);
     displayResults(results);
+    resetTotals();
 }
 
 /**
@@ -47,23 +128,37 @@ function rollDice() {
  * @returns {Array} - An object containing the results all dice rolls, which is then passed to displayResults from rollDice.
  */
 function simulateRoll(prof, abil, boost, chal, diff, setb) {
-    // This is a simplified simulation - replace with your actual dice rolling logic
-    const totalPositive = prof * 2 + abil + boost;
-    const totalNegative = chal * 2 + diff + setb;
+    for (i = 0; i < boost; i++) {
+        const roll = Math.ceil(Math.random() * 6);
+        boostDictionary['roll'+roll]();
+    }
 
-    const success = Math.max(0, Math.floor(Math.random() * totalPositive) - Math.floor(Math.random() * totalNegative));
-    const advantage = Math.floor(Math.random() * 4) - Math.floor(Math.random() * 3);
-    const triumph = prof > 0 ? Math.floor(Math.random() * prof * 0.1) : 0;
-    const despair = chal > 0 ? Math.floor(Math.random() * chal * 0.1) : 0;
+    for (i = 0; i < setb; i++) {
+        const roll = Math.ceil(Math.random() * 6);
+        setbackDictionary['roll'+roll]();
+    }
 
-    return {
-        success: success,
-        advantage: advantage,
-        triumph: triumph,
-        despair: despair,
-        failure: success < 0 ? Math.abs(success) : 0,
-        threat: advantage < 0 ? Math.abs(advantage) : 0
-    };
+    for (i=0; i < abil; i++) {
+        const roll = Math.ceil(Math.random() * 8);
+        abilityDictionary['roll'+roll]();
+    }
+
+    for (i=0; i < diff; i++) {
+        const roll = Math.ceil(Math.random() * 8);
+        difficultyDictionary['roll'+roll]();
+    }
+
+    for (i=0; i < prof; i++) {
+        const roll = Math.ceil(Math.random() * 12);
+        proficiencyDictionary['roll'+roll]();
+    }
+
+    for (i=0; i < chal; i++) {
+        const roll = Math.ceil(Math.random() * 12);
+        challengeDictionary['roll'+roll]();
+    }
+
+    return totals;
 }
 
 /**
@@ -74,6 +169,23 @@ function displayResults(results) {
     const resultsDiv = document.getElementById('results');
     const summaryDiv = document.getElementById('resultsSummary');
     const detailsDiv = document.getElementById('resultsDetails');
+
+    // Measure Success
+    totalSuccess = results.success + results.triumph;
+    totalFailure = results.failure + results.despair;
+
+    // Effects of despair and triumph cannot be negated
+    if (totalSuccess > totalFailure) {
+        results.success -= totalFailure;
+        results.failure = 0;
+    } else if (totalFailure > totalSuccess) {
+        results.failure -= totalSuccess;
+        results.success = 0;
+    }
+
+    // Measure magnitude
+    results.advantage -= results.threat;
+    results.advantage < 0 ? results.threat=Math.abs(results.advantage) : results.threat=0;
 
     let summary = '';
     if (results.success > 0) {
@@ -99,16 +211,29 @@ function displayResults(results) {
 
     // Add interpretation
     let interpretation = '';
-    if (results.success > results.failure) {
+    if (totalSuccess > totalFailure && totals.triumph > 0 || totals.despair > 0) {
+        interpretation = '<div class="alert alert-success">The action succeeds! Special event triggered.</div>';
+    } else if (totalSuccess > totalFailure) {
         interpretation = '<div class="alert alert-success">The action succeeds!</div>';
-    } else if (results.failure > results.success) {
+    } else if (totalFailure > totalSuccess && totals.triumph > 0 || totals.despair > 0) {
+        interpretation = '<div class="alert alert-success">The action fails. Special event triggered.</div>';
+    } else if (totalFailure > totalSuccess) {
         interpretation = '<div class="alert alert-danger">The action fails.</div>';
+    } else if (totalSuccess === totalFailure && totals.triumph > 0 || totals.despair > 0) {
+        interpretation = '<div class="alert alert-secondary">The action neither succeeds nor fails. Special event triggered.</div>';
     } else {
         interpretation = '<div class="alert alert-secondary">The action neither succeeds nor fails.</div>';
     }
 
     detailsDiv.innerHTML = interpretation;
     resultsDiv.style.display = 'block';
+}
+
+
+function resetTotals() {
+    for (key in totals) {
+        totals[key] = 0;
+    }
 }
 
 // Initialize page
