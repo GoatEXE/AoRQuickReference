@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             sections.push(currentSection);
         }
 
+        
         // Build the card
         const cardCol = document.createElement("div");
         cardCol.className = "col-lg-6 col-md-12 mb-4";
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const cardHeader = document.createElement("div");
         cardHeader.className = "card-header";
-        cardHeader.innerHTML = `<h5 class="mb-0"><i class="${entry.icon}"></i> ${entry.title}</h5>`;
+        cardHeader.innerHTML = `<h5 class="mb-0" id="${entry.title}"><i class="${entry.icon}"></i> ${entry.title}</h5>`;
 
         const cardBody = document.createElement("div");
         cardBody.className = "card-body";
@@ -82,11 +83,48 @@ document.addEventListener("DOMContentLoaded", async () => {
         cardCol.appendChild(card);
         rulesReferenceSection.appendChild(cardCol);
     }
+    
+    // Create a dropdown menu for this entry
+    const menu = document.querySelector(".dropdown-menu"); // Assumes only one dropdown
+
+    for (const entry of manifest) {
+        const menuItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.className = "dropdown-item";
+        link.href = "#"+entry.title; // Assumes your card headers have id=entry.title
+        link.textContent = entry.title;
+        link.onclick = (e) => {
+            e.preventDefault();
+            scrollToSection(entry.title);
+        };
+        menuItem.appendChild(link);
+        menu.appendChild(menuItem);
+    }
 });
 
 // Smooth scrolling function
 function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({
-        behavior: 'smooth'
-    });
+    const yOffset = -250; // Adjust to match your navbar height
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+
+    // Collapse the navbar if it's open (mobile)
+    const navbarCollapse = document.querySelector('.navbar-collapse.show');
+    if (navbarCollapse) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+        bsCollapse.hide();
+    }
+
+    // Collapse any open dropdowns
+    const dropdown = document.querySelector('.nav-item.dropdown.show');
+    if (dropdown) {
+        const dropdownToggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+        if (dropdownToggle) {
+            dropdownToggle.click(); // Bootstrap handles toggling
+        }
+    }
 }
+
