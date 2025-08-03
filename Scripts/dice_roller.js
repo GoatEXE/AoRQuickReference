@@ -178,7 +178,7 @@ function displayResults(results) {
     if (totalSuccess > totalFailure) {
         results.success -= totalFailure;
         results.failure = 0;
-    } else if (totalFailure > totalSuccess) {
+    } else if (totalFailure >= totalSuccess) {
         results.failure -= totalSuccess;
         results.success = 0;
     }
@@ -211,18 +211,14 @@ function displayResults(results) {
 
     // Add interpretation
     let interpretation = '';
-    if (totalSuccess > totalFailure && totals.triumph > 0 || totals.despair > 0) {
+    if ((totalSuccess > totalFailure) && (totals.triumph > 0 || totals.despair > 0)) {
         interpretation = '<div class="alert alert-success">The action succeeds! Special event triggered.</div>';
     } else if (totalSuccess > totalFailure) {
         interpretation = '<div class="alert alert-success">The action succeeds!</div>';
-    } else if (totalFailure > totalSuccess && totals.triumph > 0 || totals.despair > 0) {
-        interpretation = '<div class="alert alert-success">The action fails. Special event triggered.</div>';
-    } else if (totalFailure > totalSuccess) {
+    } else if ((totalFailure >= totalSuccess) && (totals.triumph > 0 || totals.despair > 0)) {
+        interpretation = '<div class="alert alert-danger">The action fails. Special event triggered.</div>';
+    } else if (totalFailure >= totalSuccess) {
         interpretation = '<div class="alert alert-danger">The action fails.</div>';
-    } else if (totalSuccess === totalFailure && totals.triumph > 0 || totals.despair > 0) {
-        interpretation = '<div class="alert alert-secondary">The action neither succeeds nor fails. Special event triggered.</div>';
-    } else {
-        interpretation = '<div class="alert alert-secondary">The action neither succeeds nor fails.</div>';
     }
 
     detailsDiv.innerHTML = interpretation;

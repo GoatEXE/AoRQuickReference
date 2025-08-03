@@ -5,8 +5,33 @@
         "file": "markdown/Character Creation.md"
     },
     {
-        "title": "Species",
-        "icon": "fas fa-users",
-        "file": "markdown/Species.md"
+        "title": "Dice",
+        "icon": "fa-solid fa-dice-d20",
+        "file": "Markdown/Dice.md"
+    },
+    {
+        "title": "Attributes",
+        "icon": "fa-solid fa-dice-d20",
+        "file": "Markdown/Attributes.md"
+    },
+    {
+        "title": "Destiny Actions",
+        "icon": "fa-solid fa-dice-d20",
+        "file": "Markdown/Destiny Actions.md"
+    },
+    {
+        "title": "Duty",
+        "icon": "fa-solid fa-dice-d20",
+        "file": "Markdown/Duty.md"
+    },
+    {
+        "title": "Experience",
+        "icon": "fa-solid fa-dice-d20",
+        "file": "Markdown/Experience.md"
+    },
+    {
+        "title": "Skill Checks",
+        "icon": "fa-solid fa-dice-d20",
+        "file": "Markdown/Skill Checks.md"
     }
 ]

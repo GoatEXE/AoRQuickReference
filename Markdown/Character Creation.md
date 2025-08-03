@@ -1,12 +1,11 @@
-# Character Basics
-- Choose Species
-- Select Career & Specialization
-- Determine Characteristics
-- Calculate Derived Attributes
-- Select Skills
-- Choose Talents
-- Determine Motivation
-- Calculate Starting XP
-
-# Extra Stuff
-- Blah blah blah
+# Creation Steps
+- Determine Background (p.43)
+- Determine Duty (p.46)
+- Select Species. Determines starting XP/Traits. (p.51)
+- Select Career (p.61)
+- Select Specialization (p.61-101)
+- Invest XP on traits, skills, talents, specialization, and duty value.
+- Determine derived attributes: wound, strain, defense, and soak
+- Determine Motiviation (p.104)
+- Choose Gear and Appearance. 500 credits are provided from the Rebellion. Roll d100 to represent personal funds for use after creation. (p.108, 161)
+- Acquire Rebellion Resources. Communicate with GM on player needs. (p.111)

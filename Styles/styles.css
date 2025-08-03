@@ -13,8 +13,8 @@
 
 body {
     background:
-        linear-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.3)),
-        url('../Resources/steel.jpg') no-repeat center center;
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.01)),
+        url('../Resources/8.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
