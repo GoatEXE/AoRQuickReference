@@ -1,4 +1,14 @@
 [
+        {
+        "title": "Skill Checks",
+        "icon": "fa-solid fa-anchor-circle-check",
+        "file": "Markdown/Skill Checks.md"
+    },
+    {
+        "title": "Experience",
+        "icon": "fa-solid fa-graduation-cap",
+        "file": "Markdown/Experience.md"
+    },
     {
         "title": "Character Creation",
         "icon": "fas fa-user-plus",
@@ -11,27 +21,22 @@
     },
     {
         "title": "Attributes",
-        "icon": "fa-solid fa-dice-d20",
+        "icon": "fa-solid fa-chart-column",
         "file": "Markdown/Attributes.md"
     },
     {
-        "title": "Destiny Actions",
-        "icon": "fa-solid fa-dice-d20",
-        "file": "Markdown/Destiny Actions.md"
+        "title": "Destiny Points",
+        "icon": "fa-solid fa-arrows-turn-to-dots",
+        "file": "Markdown/Destiny Points.md"
     },
     {
         "title": "Duty",
-        "icon": "fa-solid fa-dice-d20",
+        "icon": "fa-solid fa-gavel",
         "file": "Markdown/Duty.md"
     },
     {
-        "title": "Experience",
-        "icon": "fa-solid fa-dice-d20",
-        "file": "Markdown/Experience.md"
-    },
-    {
-        "title": "Skill Checks",
-        "icon": "fa-solid fa-dice-d20",
-        "file": "Markdown/Skill Checks.md"
+        "title": "Equipment",
+        "icon": "fa-solid fa-gun",
+        "file": "Markdown/Equipment.md"
     }
 ]
