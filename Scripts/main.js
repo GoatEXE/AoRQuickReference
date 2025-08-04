@@ -34,54 +34,70 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         
         // Build the card
-        const cardCol = document.createElement("div");
-        cardCol.className = "col-lg-6 col-md-12 mb-4";
+    const cardCol = document.createElement("div");
+    cardCol.className = "col-lg-6 col-md-12 mb-4";
 
-        const card = document.createElement("div");
-        card.className = "card h-100";
+    const card = document.createElement("div");
+    card.className = "card h-100";
 
-        const cardHeader = document.createElement("div");
-        cardHeader.className = "card-header";
-        cardHeader.innerHTML = `<h5 class="mb-0" id="${entry.title}"><i class="${entry.icon}"></i> ${entry.title}</h5>`;
+    // Create a unique collapse ID for this card's body
+    const collapseId = `${entry.title.replace(/\s+/g, "")}Collapse`;
 
-        const cardBody = document.createElement("div");
-        cardBody.className = "card-body";
+    const cardHeader = document.createElement("div");
+    cardHeader.className = "card-header";
+    cardHeader.setAttribute("data-bs-toggle", "collapse");
+    cardHeader.setAttribute("data-bs-target", `#${collapseId}`);
+    cardHeader.setAttribute("aria-expanded", "false");
+    cardHeader.setAttribute("aria-controls", collapseId);
+    cardHeader.style.cursor = "pointer";
+    cardHeader.innerHTML = `<h5 class="mb-0" id="${entry.title}"><i class="${entry.icon}"></i> ${entry.title}</h5>`;
 
-        const accordionId = `${entry.title.replace(/\s+/g, "")}Accordion`;
-        const accordion = document.createElement("div");
-        accordion.className = "accordion";
-        accordion.id = accordionId;
+    const cardBodyWrapper = document.createElement("div");
+    cardBodyWrapper.className = "collapse";
+    cardBodyWrapper.id = collapseId;
 
-        sections.forEach((section, index) => {
-            const sectionId = `${accordionId}-section${index}`;
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body";
 
-            const item = document.createElement("div");
-            item.className = "accordion-item";
-            item.innerHTML = `
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#${sectionId}">
-                        ${section.title}
-                    </button>
-                </h2>
-                <div id="${sectionId}" class="accordion-collapse collapse"
-                    data-bs-parent="#${accordionId}">
-                    <div class="accordion-body">
-                        <ul>
-                            ${section.items.map((item) => `<li>${item}</li>`).join("")}
-                        </ul>
-                    </div>
+    // Accordion stays inside card body
+    const accordionId = `${entry.title.replace(/\s+/g, "")}Accordion`;
+    const accordion = document.createElement("div");
+    accordion.className = "accordion";
+    accordion.id = accordionId;
+
+    // Add accordion items
+    sections.forEach((section, index) => {
+        const sectionId = `${accordionId}-section${index}`;
+
+        const item = document.createElement("div");
+        item.className = "accordion-item";
+        item.innerHTML = `
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#${sectionId}">
+                    ${section.title}
+                </button>
+            </h2>
+            <div id="${sectionId}" class="accordion-collapse collapse"
+                data-bs-parent="#${accordionId}">
+                <div class="accordion-body">
+                    <ul>
+                        ${section.items.map((item) => `<li>${item}</li>`).join("")}
+                    </ul>
                 </div>
-            `;
+            </div>
+        `;
 
-            accordion.appendChild(item);
-        });
+        accordion.appendChild(item);
+    });
 
-        cardBody.appendChild(accordion);
-        card.appendChild(cardHeader);
-        card.appendChild(cardBody);
-        cardCol.appendChild(card);
-        rulesReferenceSection.appendChild(cardCol);
+    cardBody.appendChild(accordion);
+    cardBodyWrapper.appendChild(cardBody);
+
+    card.appendChild(cardHeader);
+    card.appendChild(cardBodyWrapper);
+    cardCol.appendChild(card);
+    rulesReferenceSection.appendChild(cardCol);
     }
     
     // Create a dropdown menu for this entry
@@ -101,6 +117,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         menu.appendChild(menuItem);
     }
 });
+
+function changeBackground(imageURL) {
+    document.documentElement.style.setProperty('--bg-image', `url('${imageURL}')`);
+}
 
 // Smooth scrolling function
 function scrollToSection(sectionId) {

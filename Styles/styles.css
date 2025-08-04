@@ -8,13 +8,14 @@
     --sw-red-hover: #FF3333;
     --sw-red-gradient: linear-gradient(90deg, var(--sw-red) 0%, var(--sw-red-hover));
     --sw-dark: #1a1a1a;
-    --dark-bg: rgba(26, 26, 26, 0.95)
+    --dark-bg: rgba(26, 26, 26, 0.8);
+    --bg-image: url('../Resources/Pursuit.jpg');
 }
 
 body {
     background:
-        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.01)),
-        url('../Resources/8.jpg') no-repeat center center;
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.01)),
+        var(--bg-image) no-repeat center center;
     background-size: cover;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,7 +54,7 @@ body {
 }
 
 .card-header {
-    background: linear-gradient(90deg, var(--sw-red) 0%, var(--sw-red-hover) 100%);
+    background: var(--sw-red-gradient);
     color: white;
     font-weight: bold;
 }

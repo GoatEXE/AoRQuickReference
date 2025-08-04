@@ -13,8 +13,8 @@
 - Title should match the name of the markdown file, icon will be the classes used for the desired icon from Font Awesome, and file is the relative file path to the markdown file.
 
 # Credits
-- Font Awesome used for icons
-- svgrepo.com used for favicon .svg
-- Background image from [teahub.com](https://www.teahub.io/viewwp/mmmwhR_steel-plate-background-hd/)
-- Linked sources and core rules are owned by their respective domain owners
-- Made with love from Arkansas
+- Font Awesome used for icons.
+- Favicon from svgrepo.com .
+- Background images came from a collection of desktop wallpapers I've kept throughout the years. I'd honor the artists if I knew where they came from.
+- Linked sources and core rules are owned by their respective domain owners.
+- Made with love from Arkansas.
