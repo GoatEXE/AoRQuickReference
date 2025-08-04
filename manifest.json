@@ -38,5 +38,10 @@
         "title": "Equipment",
         "icon": "fa-solid fa-gun",
         "file": "Markdown/Equipment.md"
+    },
+    {
+        "title": "Encounters",
+        "icon": "fa-solid fa-chess-knight",
+        "file": "Markdown/Encounters.md"
     }
 ]

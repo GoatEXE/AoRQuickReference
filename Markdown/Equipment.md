@@ -1,7 +1,7 @@
 # Weapon Characteristics
 - Name (p.171)
 - Skill used (skill) when attacking with that weapon.
-- Base Damage (Dam) shows the minimum damage before soak. Each net success adds +1 damage
+- Base Damage (Dam) shows the minimum damage before soak. Each net success adds +1 damage, and can be applied to additional targets.
 - Critical Rating (Crit) shows the number of advantage needed to trigger a crit. Crits can only trigger on a successful hit that exceeds the target's soak. On a crit, roll percentile to determine effect. (p.231) One crit per hit, but if you generate enough advantage to trigger a hit multiple times, you can add +10 to the injury roll per crit.
 - Range is described as Melee, Short, Medium, Long, or Extreme.
 - Encumberance (Encum) describes weapon weight. (p.165)
