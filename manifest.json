@@ -36,12 +36,17 @@
     },
     {
         "title": "Equipment",
-        "icon": "fa-solid fa-gun",
+        "icon": "fa-solid fa-toolbox",
         "file": "Markdown/Equipment.md"
     },
     {
         "title": "Encounters",
         "icon": "fa-solid fa-chess-knight",
         "file": "Markdown/Encounters.md"
+    },
+        {
+        "title": "Combat Check",
+        "icon": "fa-solid fa-gun",
+        "file": "Markdown/Combat Check.md"
     }
 ]
