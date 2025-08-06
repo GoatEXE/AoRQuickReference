@@ -32,9 +32,18 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Rules Reference
+                            Rulesets
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#" role="button" onclick="renderCards('personnel')">Personnel Ruleset</a></li>
+                            <li><a class="dropdown-item" href="#" role="button" onclick="renderCards('vehicle')">Vehicle Ruleset</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Quick Reference
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="quickRef">
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -98,7 +107,7 @@
     <!-- Rules Reference Section -->
     <section id="rules-reference" class="py-5">
         <div class="container">
-            <h2 class="section-title text-center">Rules Reference</h2>
+            <h2 class="section-title text-center">Quick Reference</h2>
             <div class="row" id="rulesCardContainer">
                 <!-- JavaScript injected cards -->
             </div>

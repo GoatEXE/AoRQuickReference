@@ -2,61 +2,61 @@
         {
         "title": "Skill Checks",
         "icon": "fa-solid fa-anchor-circle-check",
-        "file": "Markdown/Skill Checks.md"
+        "file": "Markdown/Personnel/Skill Checks.md"
     },
     {
         "title": "Experience",
         "icon": "fa-solid fa-graduation-cap",
-        "file": "Markdown/Experience.md"
+        "file": "Markdown/Personnel/Experience.md"
     },
     {
         "title": "Character Creation",
         "icon": "fas fa-user-plus",
-        "file": "markdown/Character Creation.md"
+        "file": "markdown/Personnel/Character Creation.md"
     },
     {
         "title": "Dice",
         "icon": "fa-solid fa-dice-d20",
-        "file": "Markdown/Dice.md"
+        "file": "Markdown/Personnel/Dice.md"
     },
     {
         "title": "Attributes",
         "icon": "fa-solid fa-chart-column",
-        "file": "Markdown/Attributes.md"
+        "file": "Markdown/Personnel/Attributes.md"
     },
     {
         "title": "Destiny Points",
         "icon": "fa-solid fa-arrows-turn-to-dots",
-        "file": "Markdown/Destiny Points.md"
+        "file": "Markdown/Personnel/Destiny Points.md"
     },
     {
         "title": "Duty",
         "icon": "fa-solid fa-gavel",
-        "file": "Markdown/Duty.md"
+        "file": "Markdown/Personnel/Duty.md"
     },
     {
         "title": "Equipment",
         "icon": "fa-solid fa-toolbox",
-        "file": "Markdown/Equipment.md"
+        "file": "Markdown/Personnel/Equipment.md"
     },
     {
         "title": "Encounters",
         "icon": "fa-solid fa-chess-knight",
-        "file": "Markdown/Encounters.md"
+        "file": "Markdown/Personnel/Encounters.md"
     },
     {
         "title": "Combat Check",
         "icon": "fa-solid fa-gun",
-        "file": "Markdown/Combat Check.md"
+        "file": "Markdown/Personnel/Combat Check.md"
     },
     {
         "title": "Range Bands",
         "icon": "fa-solid fa-ruler",
-        "file": "Markdown/Range Bands.md"
+        "file": "Markdown/Personnel/Range Bands.md"
     },
     {
         "title": "Status Effects",
         "icon": "fa-solid fa-virus",
-        "file": "Markdown/Status Effects.md"
+        "file": "Markdown/Personnel/Status Effects.md"
     }
 ]

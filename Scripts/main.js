@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("manifest.json");
-    const manifest = await response.json();
+    renderCards("personnel");
+});
 
+async function renderCards(manifestSubset) {
     const rulesReferenceSection = document.getElementById("rules-reference").querySelector(".row");
+    rulesReferenceSection.innerHTML = ""; // Clear previous cards
+
+    const response = await fetch(`${manifestSubset}_manifest.json`);
+    const manifest = await response.json();
 
     for (const entry of manifest) {
         const mdResponse = await fetch(entry.file);
@@ -101,13 +106,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     
     // Create a dropdown menu for this entry
-    const menu = document.querySelector(".dropdown-menu"); // Assumes only one dropdown
+    const menu = document.getElementById("quickRef");
+    menu.innerHTML = ""; // Clear previous menu items
 
     for (const entry of manifest) {
         const menuItem = document.createElement("li");
         const link = document.createElement("a");
         link.className = "dropdown-item";
-        link.href = "#"+entry.title; // Assumes your card headers have id=entry.title
+        link.href = "#"+entry.title;
         link.textContent = entry.title;
         link.onclick = (e) => {
             e.preventDefault();
@@ -116,7 +122,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         menuItem.appendChild(link);
         menu.appendChild(menuItem);
     }
-});
+}
 
 function changeBackground(imageURL) {
     document.documentElement.style.setProperty('--bg-image', `url('${imageURL}')`);
