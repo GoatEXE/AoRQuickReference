@@ -13,3 +13,8 @@
 - Gained by hiding behind a wall, crate, rock, or structure.
 - +1 ranged defense
 - +1 setback to being preceived.
+
+# Low and High Gravity
+- Up to +3 setback to any Brawn based skill check plus coordination, except Resilience on high gravity environments.
+- Up to +3 boost to any Brawn based skill check plus coordination, except Resilience on low gravity environments.
+- No bonuses for zero gravity, all environment turns to difficult terrain. Encumbrance remains the same.
