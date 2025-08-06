@@ -29,3 +29,11 @@
 - If successful, you can spend one triumph or two advantage to make another attack.
 - If that is successful, spend an additional triumph or advantage to activate qualities from either weapon. 
 - +1 damage for each uncancelled success.
+
+# Unarmed Combat
+- The skill used for unarmed is generally Brawl.
+- Base damage = Brawn
+- Crit rating = 5
+- Disorient 1, Knockdown
+- Can target either strain or wound, still reduced by soak. (Represents grappling)
+- Can be augmented by brawl weapons. Everything is additive except crit rating, use one or another. (p.180)
