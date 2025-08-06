@@ -37,3 +37,12 @@
 - Disorient 1, Knockdown
 - Can target either strain or wound, still reduced by soak. (Represents grappling)
 - Can be augmented by brawl weapons. Everything is additive except crit rating, use one or another. (p.180)
+
+# Improvised Weapons
+- Make a check using Melee skill.
+- Generates automatic +1 threat.
+- 1 despair or two threat indicates that the weapon breaks.
+- Deal damage based on size/weight, all crit value = 5
+- <b>Small</b>: +1 damage (bottle, fist-sized rock).
+- <b>Medium</b>: +2 damage, cumbersome 2 (two handed rock, chair)
+- <b>Large</b>: +3 damage, cumbersome 4 (shovel, table, crate) 
