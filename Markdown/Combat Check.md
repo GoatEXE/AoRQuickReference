@@ -20,3 +20,12 @@
 - 2 Threat or 1 Despair cost: An opponent may perform a free immediate maneuver in response to this check; add 1 boost to the target's next check; active character or ally suffers 1 setback on next check.
 - 3 Threat or 1 Despair cost: Character falls prone; provide a significant enviornmental advantage to an opponent.
 - 1 Despair cost: Weapon runs out of ammo or energy; upgrade difficulty of an ally's next check, including active character; Tool or weapon becomes damaged (p.172)
+
+# Two-Weapon Combat
+- Generally 2 light weapons or one-handed (p.224)
+- Designate one weapon as primary and the other as secondary.
+- Determine the traits and skills for each weapon and take the lowest of both to assemble the dice pool.
+- Take the highest difficulty of either of the weapons and add 1 if the weapons are the same, 2 otherwise.
+- If successful, you can spend one triumph or two advantage to make another attack.
+- If that is successful, spend an additional triumph or advantage to activate qualities from either weapon. 
+- +1 damage for each uncancelled success.
