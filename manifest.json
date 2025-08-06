@@ -53,5 +53,10 @@
         "title": "Range Bands",
         "icon": "fa-solid fa-ruler",
         "file": "Markdown/Range Bands.md"
+    },
+    {
+        "title": "Status Effects",
+        "icon": "fa-solid fa-virus",
+        "file": "Markdown/Status Effects.md"
     }
 ]
