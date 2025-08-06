@@ -44,9 +44,14 @@
         "icon": "fa-solid fa-chess-knight",
         "file": "Markdown/Encounters.md"
     },
-        {
+    {
         "title": "Combat Check",
         "icon": "fa-solid fa-gun",
         "file": "Markdown/Combat Check.md"
+    },
+    {
+        "title": "Range Bands",
+        "icon": "fa-solid fa-ruler",
+        "file": "Markdown/Range Bands.md"
     }
 ]
