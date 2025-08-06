@@ -8,3 +8,8 @@
 - +1: mist, shadow, waist-high grass.
 - +2: Fog, early morning or late evening darkness, shoulder high grass.
 - +3: Heavy fog, thick and choking smoke, darkness of night, head-height underbrush and grass.
+
+# Cover
+- Gained by hiding behind a wall, crate, rock, or structure.
+- +1 ranged defense
+- +1 setback to being preceived.
