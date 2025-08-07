@@ -1,0 +1,11 @@
+# Definitions
+- <b>Handling</b>: Number of boost or setback added to the pool when making Piloting checks.
+- <b>Speed</b>: An abstract maximum speed value for this vehicle.
+- <b>Silhouette</b>: An abstract value respresenting size between 0 to 10+, 0 being sub-human. Attacking a silhouette +2 in size removes 1 difficulty. Attacking a silhouette -2 in size adds +1 difficulty.
+- <b>Defense</b>: Represents shields, speed, or other technologies to reduce/avoid damage. +1 setback to incoming attack roles per point of defense.
+- <b>Defense Zones</b>: Smaller vehicles (<4) have fore and aft zones, where larger vehicles (5+) have 4 zones. Zones can be customized. For example, you can remove 1 defense from the fore and add it to your aft zone, providing 2 defense rear and none front.
+- <b>Armor</b>: This soak value reduces incoming damage by that amount.
+- <b>Hull Trama Threshold</b>: A number of hit points before structural failure.
+- <b>System Strain Threshold</b>: A number of hit points before system shutdown. Cannot be recovered by spending advantage, only crew and system rest.
+- <b>Hard Points</b>: A number of customizations supported by the vehicle chassis.
+- Note: vehicle and personnel stat ratio is 10:1. For example, a human sized blaster would need to deal 10 damage for 1 wound on a vehicle.
