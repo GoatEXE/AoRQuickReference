@@ -1,23 +1,24 @@
 [
-        {
-        "title": "Skill Checks",
-        "icon": "fa-solid fa-anchor-circle-check",
-        "file": "Markdown/Personnel/Skill Checks.md"
-    },
-    {
-        "title": "Experience",
-        "icon": "fa-solid fa-graduation-cap",
-        "file": "Markdown/Personnel/Experience.md"
-    },
     {
         "title": "Character Creation",
         "icon": "fas fa-user-plus",
         "file": "markdown/Personnel/Character Creation.md"
     },
     {
+        "title": "Experience",
+        "icon": "fa-solid fa-graduation-cap",
+        "file": "Markdown/Personnel/Experience.md"
+    },
+
+    {
         "title": "Dice",
         "icon": "fa-solid fa-dice-d20",
         "file": "Markdown/Personnel/Dice.md"
+    },
+    {
+        "title": "Skill Checks",
+        "icon": "fa-solid fa-screwdriver",
+        "file": "Markdown/Personnel/Skill Checks.md"
     },
     {
         "title": "Attributes",
