@@ -58,5 +58,10 @@
         "title": "Status Effects",
         "icon": "fa-solid fa-virus",
         "file": "Markdown/Personnel/Status Effects.md"
+    },
+        {
+        "title": "Recovery",
+        "icon": "fa-solid fa-heart-pulse",
+        "file": "Markdown/Personnel/Recovery.md"
     }
 ]
