@@ -22,3 +22,15 @@
 # Suffocation
 - Without protective gear in the vacuum of space or underwater, you can hold your breath for a number of rounds equal to Brawn.
 - Afterwards, suffer 3 wounds per round. When exceeded become incapacitated and suffer one critical injuries (two if in vacuum) and +1 (+2 if in vacuum) more every turn afterwards.
+
+# Staggered
+- Unable to perform actions for the specified duration. (p.230)
+- If not specified, lasts until the end of the character's next turn.
+
+# Immobilized
+- Unable to perform maneuvers for the specified duration. (p.230)
+- If not specified, lasts until the end of the character's next turn.
+
+# Disoriented
+- Add +1 setback to each skillcheck for the specified duration. (p.230)
+- If not specified, lasts until the end of the character's next turn.
