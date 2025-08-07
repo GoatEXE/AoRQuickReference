@@ -49,7 +49,7 @@ async function renderCards(manifestSubset) {
     const collapseId = `${entry.title.replace(/\s+/g, "")}Collapse`;
 
     const cardHeader = document.createElement("div");
-    cardHeader.className = "card-header";
+    cardHeader.className = "card-header flicker-in-1";
     cardHeader.setAttribute("data-bs-toggle", "collapse");
     cardHeader.setAttribute("data-bs-target", `#${collapseId}`);
     cardHeader.setAttribute("aria-expanded", "false");
@@ -122,6 +122,13 @@ async function renderCards(manifestSubset) {
         menuItem.appendChild(link);
         menu.appendChild(menuItem);
     }
+
+    // Animation delay
+    document.querySelectorAll('.flicker-in-1').forEach(el => {
+    const randomDelay = (Math.random() * .7).toFixed(2) + 's'; // Up to 0.7s delay
+    el.style.animationDelay = randomDelay;
+});
+
 }
 
 function changeBackground(imageURL) {
