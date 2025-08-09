@@ -1,26 +1,28 @@
 # Weapon Characteristics
-- Name (p.171)
-- Skill used (skill) when attacking with that weapon.
-- Base Damage (Dam) shows the minimum damage before soak. Each net success adds +1 damage, and can be applied to additional targets.
-- Critical Rating (Crit) shows the number of advantage needed to trigger a crit. Crits can only trigger on a successful hit that exceeds the target's soak. On a crit, roll percentile to determine effect. (p.231) One crit per hit, but if you generate enough advantage to trigger a hit multiple times, you can add +10 to the injury roll per crit.
-- Range is described as Melee, Short, Medium, Long, or Extreme.
-- Encumberance (Encum) describes weapon weight. (p.165)
-- Hard Points (HP) is the number of modifications you can make. (p.199)
-- Price is how much the weapon costs on an open market. "R" identifies the weapon as restricted.
-- Rarity is how likely the item can be found. (p.164)
-- Special qualities are noted here. (p.168, 173)
+- <b>Name</b> (p.171)
+- <b>Skill</b>: the skill used to determine success while attacking with that weapon.
+- <b>Base Damage (Dam)</b>: Minimum damage before soak. Each net success adds +1 damage, and can be applied to additional targets.
+- <b>Critical Rating (Crit)</b>: Number of advantage needed to trigger a crit. Crits can only trigger on a successful hit that exceeds the target's soak. On a crit, roll percentile to determine effect. (p.231) One crit per hit, but if you generate enough advantage/triumph to trigger a crit multiple times, you can add +10 to the injury roll per crit.
+- <b>Range</b>: maximum usable range. (p.221)
+- <b>Encumberance (Encum)</b>: weapon weight/bulk. (p.165)
+- <b>Hard Points (HP)</b>: Number of modifications/attachments the weapon can handle. (p.199)
+- <b>Price</b>: Weapon cost in credits on an open market. "R" identifies the weapon as restricted.
+- <b>Rarity</b>: How likely the item can be found in a scale, 10 being most rare. Effects price. (p.164)
+- <b>Special</b>: The active and passive qualities a weapon has. Active qualities are usually triggered in combat by spending 2 advantage. (p.168, 173)
 
 # Repairing
-- Minor (Easy difficulty to repair) and 1 additional setback (d6) if continued use.
-- Moderate (Average difficulty to repair) and 1 additional difficulty (d8) if continued use.
-- Major (Hard difficulty to repair) and unable to use.
-- 1 to 2 hours of repair time per difficulty. +1 difficulty if attempted to repair sooner. +1 difficulty for lack of tools.
-- Cost of repair is 25% of original weapon cost if minor, 50% for moderate, and 100% for major. Reduced by 10% per advantage on the skill check.
+- Damage to weapon systems can happen if a despair is rolled on an skillcheck. (p.172)
+- Repaired with Mechanics. More sophisticated weapons can use Computers or its combat skill.
+- Cost of minor repair is 25% of original weapon cost, 50% for moderate, and 100% for major. Reduced by 10% per advantage on the skill check.
+- 1 to 2 hours of repair time per difficulty. +1 difficulty for a rushed repair. +1 difficulty for lack of tools. Cumulative.
+- <b>Minor Damge</b>: (DC1 repair) operation takes 1 additional setback (d6) for continued use.
+- <b>Moderate Damage</b>: (DC2 repair) operation takes 1 additional difficulty (d8) for continued use.
+- <b>Major Damage</b>: (DC3 repair) Operation impossible.
 
 # Armor Characteristics
-- Defense: number of setback (d6) added to the attacker's dice pool (p.183)
-- Soak: added to the character's soak value 
-- Price is how much the weapon costs on an open market. "R" identifies the weapon as restricted.
-- Encumberance (Encum) describes weapon weight. (p.165)
-- Hard Points (HP) is the number of modifications you can make. (p.199)
-- Rarity is how likely the item can be found. (p.164)
+- <b>Defense</b>: number of setback (d6) added to the attacker's dice pool. Multiple sources do not stack, but you take the best available. (p.183)
+- <b>Soak</b>: Damage reduction to be applied before taking wound damage. Value is added to the character's soak value. 
+- <b>Price</b>: Armor cost in an open market. "R" identifies the armor as restricted.
+- <b>Encumberance (Encum)</b>: describes armor weight/bulk, but only comes into play when being carried instead of worn. (p.165)
+- <b>Hard Points (HP)</b> Number of modifications/attachments the armor can handle. (p.205)
+- <b>Rarity</b> How likely the item can be found in a scale, 10 being most rare. Effects Price.  (p.164)

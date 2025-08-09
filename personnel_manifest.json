@@ -1,15 +1,9 @@
 [
     {
-        "title": "Character Creation",
+        "title": "Character Development",
         "icon": "fas fa-user-plus",
-        "file": "markdown/Personnel/Character Creation.md"
+        "file": "markdown/Personnel/Character Development.md"
     },
-    {
-        "title": "Experience",
-        "icon": "fa-solid fa-graduation-cap",
-        "file": "Markdown/Personnel/Experience.md"
-    },
-
     {
         "title": "Dice",
         "icon": "fa-solid fa-dice-d20",

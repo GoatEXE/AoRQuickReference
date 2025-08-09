@@ -1,5 +1,6 @@
 # Skill Check
-- Refer to "Building a Dice Pool" under the Dice section.
+- Refer to "Building Dice Pool" under the "Dice" section.
+- Attacking (or actions) are also considered skill checks.
 
 # Opposed Checks
 - Used when a characters actively tries to stop another from succeding. (p.31)
@@ -14,8 +15,8 @@
 
 # Assisted Checks
 - A player explains how they plan to assist another in a skill check. If it's reasonable, the GM may allow assistance. (p.33)
-- Two types of assisted checks: Skilled and Unsckilled Assistance.
-- Skilled assistance means that the dice pool can use one player's trait rating, and the other's skill rating
-- Unskilled assistance means that a person who does not have a higher rating tries to help. This will add one boost die to the pool.
+- Two types of assisted checks: Skilled and Unskilled Assistance.
+- <b>Skilled assistance</b> means that the dice pool can use one player's trait rating, and the other's skill rating
+- <b>Unskilled assistance</b> means that a person who does not have a higher rating tries to help. This will add one boost die to the pool.
 - Generally, only one person can assist. In situations where more than one can assist, only one can provide skilled assistance, while the others provide a boost each.
 - During initiative, assistance can be provided by taking the assist maneuver. 
