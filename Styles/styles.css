@@ -1,6 +1,7 @@
 :root {
     --sw-orange: #ff5e00;
     --sw-yellow: #FFE81F;
+    --sw-purple: #881DD1;
     --sw-blue: #0066CC;
     --sw-blue-hover: #0088ff;
     --sw-blue-gradient: linear-gradient(90deg, var(--sw-blue) 0%, var(--sw-blue-hover));
@@ -73,8 +74,12 @@ body {
     color: white;
 }
 
+.btn-outline-secondary {
+    border-color: var(--sw-purple);
+    color: var(--sw-purple);
+}
 .btn-red:hover {
-    background: var(--sw-red-hover)
+    background: var(--sw-red-hover);
 }
 
 .hero-section {
